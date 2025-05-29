@@ -5,8 +5,14 @@ public class Greeting {
         System.out.print("請使用者輸入姓名: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
+        // 方法一:
+//        String input = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
 
-        String input = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+        // 方法二:
+        String upperName = name.toUpperCase();
+        String firstChar = upperName.substring(0, 1);                // 取第一個字元(已是大寫)
+        String restChars = name.substring(1).toLowerCase();          // 從第二個字元起全部轉小寫
+        String input = firstChar + restChars;
 
         // 預設一個空字串
         String result = "";
