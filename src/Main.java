@@ -13,20 +13,22 @@ public class Main {
             System.out.print("請輸入寶可夢名稱：");
             String name = scanner.nextLine();
 
-            Pokemon pokemon = null;
+            Pokemon pokemon;
             if (type.equals("Psyduck")) {
-                pokemon = new Psyduck("Psyduck");
+                pokemon = new Psyduck(name);
             } else if (type.equals("Charizard")) {
-                pokemon = new Charizard("Charizard");
+                pokemon = new Charizard(name);
             } else if (type.equals("Bulbasaur")) {
-                pokemon = new Bulbasaur("Bulbasaur");
+                pokemon = new Bulbasaur(name);
             } else {
                 System.out.println("輸入的寶可夢類別無效，請重新輸入。");
                 continue;
             }
 
-            pokemon.setName(name);
+            //用setter方法
+//            pokemon.setName(name);
             pokemon.displayInfo();
+
         }
         scanner.close();
     }

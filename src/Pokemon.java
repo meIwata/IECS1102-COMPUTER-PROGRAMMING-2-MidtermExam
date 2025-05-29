@@ -34,21 +34,21 @@ public class Pokemon {
         return pokemonCount;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public void setType(String type) {
         this.type = type;
     }
 
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public void setCandy(int candy) {
-        this.candy = candy;
-    }
+//    public void setLevel(int level) {
+//        this.level = level;
+//    }
+//
+//    public void setCandy(int candy) {
+//        this.candy = candy;
+//    }
 
     public void evolve() {
         if (getCandy() >= 10) {
